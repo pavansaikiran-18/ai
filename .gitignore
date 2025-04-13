@@ -1,2 +1,6 @@
+Scripts
+pyvenv.cfg
+Lib
 .env
-venv
+Include
+.gitignore
