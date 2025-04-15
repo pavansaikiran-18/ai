@@ -4,3 +4,4 @@ Lib
 .env
 Include
 .gitignore
+venv

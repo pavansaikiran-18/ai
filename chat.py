@@ -1,12 +1,12 @@
-from google import genai
+from google import genai  
 import os
 import streamlit as st
 from dotenv import load_dotenv
 
-# Load environment variable
+
 load_dotenv()
 
-# Configure client (DO NOT CHANGE LOGIC)
+
 client = genai.Client(api_key=os.getenv("GEMINI_API_KEY"))
 
 # Streamlit UI Setup
@@ -29,14 +29,13 @@ st.markdown("""
     </style>
 """, unsafe_allow_html=True)
 
-# Title and greeting
 st.title("🤖 Gemini Chat Interface")
 st.markdown("Hi, Hello! I'm Gemini...")
 
-# Input
+
 user_input = st.text_input("User:")
 
-# When user submits input
+
 if user_input:
     try:
         response = client.models.generate_content(
